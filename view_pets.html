@@ -1,0 +1,17 @@
+<html>
+<body>
+    <h1>Pets</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name() }}<br>
+        {{ form.age.label }} {{ form.age() }}<br>
+        {{ form.type.label }} {{ form.type() }}<br>
+        <input type="submit" value="Add Pet">
+    </form>
+    <ul>
+        {% for pet in pets %}
+            <li>{{ pet.name }} ({{ pet.age }} years old, {{ pet.type }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

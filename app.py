@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for
 from models import db, Pet
 from forms import PetForm
 
-app = Flask(_name_)
+app = flask_pkr_app(_name_)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pets.db'
 app.config['SECRET_KEY'] = 'your_secret_key'
 
